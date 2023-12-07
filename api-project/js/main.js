@@ -1,6 +1,4 @@
-import "../css/style.css";
-
-const URL = `https://ch.tetr.io/api/`; 
+const URL = `https://www.cheapshark.com/api/1.0/games?title=batman`; 
 
 async function getData(URL) {
   try {
