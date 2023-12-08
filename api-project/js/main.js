@@ -1,5 +1,5 @@
-const URL = `https://www.cheapshark.com/api/1.0/games?title=batman`; 
-
+//const URL = `https://www.cheapshark.com/api/1.0/deals?&upperPrice=15`; 
+const URL = `https://www.cheapshark.com/api/1.0/games?title=batman`;
 async function getData(URL) {
   try {
     const response = await fetch(URL);
@@ -12,4 +12,4 @@ async function getData(URL) {
 
 getData(URL);
 
-//fish
+//cheap shark  & MapQuest to locate store
