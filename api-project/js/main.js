@@ -1,6 +1,8 @@
 //const URL = `https://www.cheapshark.com/api/1.0/deals?&upperPrice=15`; 
+import { DOMSelectors } from "./dom";
 
-const URL = `https://www.cheapshark.com/api/1.0/deals?&pageSize=1&upperPrice=15`;
+
+const URL = `https://www.cheapshark.com/api/1.0/stores?lastChange=deals?&pageSize=1&upperPrice=15`;
 async function getData(URL) {
   try {
     const response = await fetch(URL);
@@ -15,6 +17,12 @@ async function getData(URL) {
 }
 
 getData(URL);
+
+function makedropdown(arr) {
+  DOMSelectors.dropcontainer.insertAdjacentHTML("beforeend", 
+  ''
+  )}
+
 
 
 
