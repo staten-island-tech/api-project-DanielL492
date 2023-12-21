@@ -81,6 +81,7 @@ function makedropdown() {
 )}
 
 document.querySelector("#stores").addEventListener("change", function(){
+  let URL = "";
   async function getStores() {
 
   }
