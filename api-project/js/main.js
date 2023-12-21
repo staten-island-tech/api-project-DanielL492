@@ -2,7 +2,7 @@
 import { DOMSelectors } from "./dom";
 
 DOMSelectors.top10btn.addEventListener("click", function(){
-  const URL = `https://www.cheapshark.com/api/1.0/deals?&pageSize=10`;
+  let URL = `https://www.cheapshark.com/api/1.0/deals?&pageSize=10`;
   async function getData(URL) {
     try {
       const response = await fetch(URL);
@@ -14,11 +14,12 @@ DOMSelectors.top10btn.addEventListener("click", function(){
           <div class="card">
             <h4 class="name">${data.title}</h1>
             <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
-            <h5 class="price"> Price: ${data.salePrice}</h5>
+            <h5 class="price"> Sale Price: ${data.salePrice}</h5>
               
           </div>
         </div>`
         ))}
+      clearcards();
       insert(data);
     }
     catch (error) {
@@ -29,6 +30,10 @@ DOMSelectors.top10btn.addEventListener("click", function(){
   getData(URL);
 })
 
+function clearcards() {
+  const card = document.querySelectorAll(".card");
+  card.forEach((name) => name.remove());
+};
 
 function makedropdown() {
   DOMSelectors.dropcontainer.insertAdjacentHTML("beforeend", 
@@ -74,6 +79,12 @@ function makedropdown() {
   </select>
 </div>`
 )}
+
+document.querySelector("#stores").addEventListener("change", function(){
+  async function getStores() {
+
+  }
+})
 
 makedropdown()
 
