@@ -15,7 +15,7 @@ DOMSelectors.top10btn.addEventListener("click", function(){
             <h4 class="name">${data.title}</h1>
             <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
             <h5 class="price"> Sale Price: ${data.salePrice}</h5>
-              
+            <h6 id="${data.storeID}">Store: ${data.storeID}</h3>
           </div>
         </div>`
         ))}
@@ -80,12 +80,12 @@ function makedropdown() {
 </div>`
 )}
 
-document.querySelector("#stores").addEventListener("change", function(){
+/*document.querySelector("#stores").addEventListener("change", function(){
   let URL = "";
   async function getStores() {
 
   }
-})
+})*/
 
 makedropdown()
 
