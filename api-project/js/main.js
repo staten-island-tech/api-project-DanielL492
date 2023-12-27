@@ -15,7 +15,7 @@ DOMSelectors.top10btn.addEventListener("click", function(){
             <h4 class="name">${data.title}</h1>
             <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
             <h5 class="price"> Sale Price: ${data.salePrice}</h5>
-            <h6 id="${data.storeID}">Store: ${data.storeID}</h3>
+            <h6 id="${storeNam}">Store: ${storeNam}</h3>
           </div>
         </div>`
         ))}
@@ -26,7 +26,23 @@ DOMSelectors.top10btn.addEventListener("click", function(){
       console.log("error");
       document.querySelector("h3").textContent = "Error";
     }
-  }
+  let BRL = `https://www.cheapshark.com/api/1.0/stores`;
+  async function getstore(BRL) {
+    try {
+      const response = await fetch(brl);
+      const data = await response.json();
+      console.log(data)
+      function makeidname(arr)
+        data.forEach((arr) => function hi(){
+          let storeNam = data.storeName.value;
+        })
+    }
+    catch (error) {
+      console.log("error");
+      document.querySelector("h3").textContent = "Error";
+    }
+    makeidname(data)
+  }}
   getData(URL);
 })
 
