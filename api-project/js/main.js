@@ -33,7 +33,7 @@ DOMSelectors.top10btn.addEventListener("click", function(){
       console.log(data)
       function makeidname(data) {
         data.forEach((arr) => function (){
-          let arr.storeID.value = arr.storeName.value;
+          let storeID = arr.storeName.value;
       })}
       makeidname(data);
     }
