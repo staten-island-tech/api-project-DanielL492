@@ -63,9 +63,7 @@ function makedropdown() {
       <option value="3">GreenManGaming</option>
       <option value="7">GOG</option>
       <option value="8">Origin</option>
-      <option value="10">Shiny Loot</option>
       <option value="11">Humble Store</option>
-      <option value="12">Desura</option>
       <option value="13">Uplay</option>
       <option value="14">IndieGameStand</option>
       <option value="15">Fanatical</option>
@@ -73,7 +71,6 @@ function makedropdown() {
       <option value="23">GameBillet</option>
       <option value="24">Voidu</option>
       <option value="25">Epic Games Store</option>
-      <option value="26">Razer Game Store</option>
       <option value="27">Gamesplanet</option>
       <option value="28">Gamesload</option>
       <option value="29">2Game</option>
@@ -92,6 +89,7 @@ document.querySelector("#stores").addEventListener("change", function(){
   let URL = `https://www.cheapshark.com/api/1.0/deals?storeID=${document.querySelector("#stores").value}`;
   async function getStores(URL) {
     try {
+      document.querySelector("h4").textContent = "";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -106,7 +104,7 @@ document.querySelector("#stores").addEventListener("change", function(){
         </div>`
         ))
         if (arr.length == 0) {
-          document.querySelector("h5").textContent = "No Deals Found";
+          document.querySelector("h4").textContent = "No Deals Found";
         }
       }
       clearcards();
