@@ -7,7 +7,7 @@ DOMSelectors.top10btn.addEventListener("click", function(){
     try {
       const response = await fetch(URL);
       const data = await response.json();
-      //console.log(data)
+      console.log(data)
       function insert(arr) {
         arr.forEach((data) => DOMSelectors.container.insertAdjacentHTML("beforeend",
         `<div class="flexcontainer">
