@@ -117,9 +117,33 @@ document.querySelector("#stores").addEventListener("change", function(){
     getStores(URL);
 })
 
-
-
-
+DOMSelectors.form.addEventListener("submit", function(event) {
+  event.preventDefault();
+  let URL = `https://www.cheapshark.com/api/1.0/deals?title=${DOMSelectors.inputname.value}&upperPrice=${DOMSelectors.inputprice.value}`;
+  async function getData(URL) {
+    try {
+      const response = await fetch(URL);
+      const data = await response.json();
+      console.log(data)
+      function insert(arr) {
+        arr.forEach((data) => DOMSelectors.container.insertAdjacentHTML("beforeend",
+        `<div class="flexcontainer">
+          <div class="card">
+            <h4 class="name">${data.external}</h1>
+            <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
+            <h5 class="price"> Sale Price: ${data.cheapest}</h5>
+          </div>
+        </div>`
+        ))}
+      clearcards();
+      insert(data);
+    }
+    catch (error) {
+      console.log("error");
+      document.querySelector("h3").textContent = "Error";
+    }}
+    getData(URL);
+  });
 
 
 //cheap shark  & MapQuest to locate store

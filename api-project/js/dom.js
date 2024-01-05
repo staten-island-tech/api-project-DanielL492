@@ -4,7 +4,8 @@ const DOMSelectors = {
     container: document.getElementById("flexcontainer"),
     storename: document.getElementById("storename"),
     inputname: document.getElementById("inputtitle"),
-    inputprice: document.getElementById("inputprice")
+    inputprice: document.getElementById("inputprice"),
+    form: document.getElementById("form"),
 }
 
 export {DOMSelectors};
