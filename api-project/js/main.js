@@ -119,7 +119,7 @@ document.querySelector("#stores").addEventListener("change", function(){
 
 DOMSelectors.form.addEventListener("submit", function(event) {
   event.preventDefault();
-  let URL = `https://www.cheapshark.com/api/1.0/deals?title=${DOMSelectors.inputname.value}&upperPrice=${DOMSelectors.inputprice.value}`;
+  let URL = `https://www.cheapshark.com/api/1.0/deals?title=${DOMSelectors.inputname.value}&upperPrice=${DOMSelectors.inputprice.value}&pageSize=${DOMSelectors.dealamnt.value}`;
   async function getData(URL) {
     try {
       const response = await fetch(URL);
@@ -129,9 +129,9 @@ DOMSelectors.form.addEventListener("submit", function(event) {
         arr.forEach((data) => DOMSelectors.container.insertAdjacentHTML("beforeend",
         `<div class="flexcontainer">
           <div class="card">
-            <h4 class="name">${data.external}</h1>
+            <h4 class="name">${data.title}</h1>
             <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
-            <h5 class="price"> Sale Price: ${data.cheapest}</h5>
+            <h5 class="price"> Sale Price: ${data.salePrice}</h5>
           </div>
         </div>`
         ))}
