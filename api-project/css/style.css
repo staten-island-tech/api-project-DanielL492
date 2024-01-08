@@ -18,14 +18,13 @@ body {
     align-items: center;
     flex-direction: column;
     background-color: rgba(110, 110, 241, 0.774);
-    width: 25vw;
-    height: 50vh;
+    width: 15vw;
+    height: 40vh;
     font-size: 1rem;
     border-radius: 15px;
     padding-bottom: 3vh;
     margin: 7.5vh;
     box-shadow: 10px 10px;
-    transition: all .3s;
    }
    
    .card-img {
