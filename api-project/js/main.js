@@ -5,7 +5,7 @@ function top10(){
   let URL = `https://www.cheapshark.com/api/1.0/deals?&pageSize=10`;
   async function getData(URL) {
     try {
-      document.querySelector("h2").textContent = "Top 10 Deals Right Now";
+      document.querySelector("h3").textContent = "Top 10 Deals Right Now";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -24,7 +24,7 @@ function top10(){
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h2").textContent = "Error";
+      document.querySelector("h3").textContent = "Error";
     }}
     getData(URL);
   }
@@ -92,7 +92,7 @@ document.querySelector("#stores").addEventListener("change", function(){
   let URL = `https://www.cheapshark.com/api/1.0/deals?storeID=${document.querySelector("#stores").value}`;
   async function getStores(URL) {
     try {
-      document.querySelector("h2").textContent = "Here's some deals from the store:";
+      document.querySelector("h3").textContent = "Here's some deals from the store:";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -107,7 +107,7 @@ document.querySelector("#stores").addEventListener("change", function(){
         </div>`
         ))
         if (arr.length == 0) {
-          document.querySelector("h4").textContent = "No Deals Found";
+          document.querySelector("h3").textContent = "No Deals Found";
         }
       }
       clearcards();
@@ -115,7 +115,7 @@ document.querySelector("#stores").addEventListener("change", function(){
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h2").textContent = "Error";
+      document.querySelector("h3").textContent = "Error";
     }}
     getStores(URL);
 })
@@ -125,7 +125,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
   let URL = `https://www.cheapshark.com/api/1.0/deals?title=${DOMSelectors.inputname.value}&upperPrice=${DOMSelectors.inputprice.value}&pageSize=${DOMSelectors.dealamnt.value}`;
   async function getData(URL) {
     try {
-      document.querySelector("h2").textContent = "Here's your specific deal(s):";
+      document.querySelector("h3").textContent = "Here's your specific deal(s):";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -144,7 +144,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h2").textContent = "Error";
+      document.querySelector("h3").textContent = "Error";
     }}
     getData(URL);
   });
