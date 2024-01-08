@@ -14,7 +14,7 @@ function top10(){
         `<div class="flexcontainer">
           <div class="card">
             <h4 class="name">${data.title}</h1>
-            <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
+            <img src="${data.thumb}" alt="${data.title} Cover Art" class="card-img"/> <br>
             <h5 class="price"> Sale Price: ${data.salePrice}</h5>
           </div>
         </div>`
@@ -101,7 +101,7 @@ document.querySelector("#stores").addEventListener("change", function(){
         `<div class="flexcontainer">
           <div class="card">
             <h4 class="name">${data.title}</h1>
-            <img src="${data.thumb}" alt="Image" class="card-img"/> <br>
+            <img src="${data.thumb}" alt="${data.title} Cover Art" class="card-img"/> <br>
             <h5 class="price"> Sale Price: ${data.salePrice}</h5>
           </div>
         </div>`
@@ -134,7 +134,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
         `<div class="flexcontainer">
           <div class="card">
             <h4 class="name">${data.title}</h1>
-            <img src="${data.thumb}" alt="Game Image" class="card-img"/> <br>
+            <img src="${data.thumb}" alt="${data.title} Cover Art" class="card-img"/> <br>
             <h5 class="price"> Sale Price: ${data.salePrice}</h5>
           </div>
         </div>`
