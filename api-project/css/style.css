@@ -66,8 +66,29 @@ body {
    }
 
    .title {
-    margin-left: 20vw;
-    margin-right: 20vw;
+    background-color: rgb(7, 126, 144);
+    margin-left: 30vw;
+    margin-right: 30vw;
     border-radius: 7px;
    }
+  
+   #inputcontainer { 
+    display: flex; 
+    align-items: center;
+    flex-direction: column;  
+    align-self: center;  
+    background-color: rgba(144, 7, 7, 0.926);
+    padding-bottom: 2%; 
+    margin-left: 35vw; 
+    margin-right: 35vw;
+    border-radius: 10px; 
+ }
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5 {
+   text-align: center;
+ }
    

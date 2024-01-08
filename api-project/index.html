@@ -11,29 +11,31 @@
     <title>API Project</title>
   </head>
   <body>
-    <h1>Video Game Discounts</h1>
+    <h1 class="title">Video Game Discounts</h1>
     <div id = "btncontainer">
       <h2 id = "qbtn">What deals are you looking for today?</h2> <br>
       <div id ="dropcontainer"></div>
     </div>
-    <form action="" id="form" label="Specific Deal Searcher">
-      <div class="inputs">
-        <h2>Search for a Specific Game Deal:</h2>
-        <div class="input1">
-            <label for="inputtitle"> Game Title:</label>
-            <input type="text" id="inputtitle" /> <br> 
-        </div>
-        <div class="input2">
-            <label for="inputprice"> Max Price for Your Deals:</label>
-            <input type="text" id="inputprice"/> <br>
-        </div>
-        <div class="input3">
-          <label for="dealamnt"> How many deals do you want?</label>
-          <input type="text" id="dealamnt"/> <br>
-        </div>
-          <input type="submit" value="Click to Submit" id="submit" />
-        </div>
-    </form>
+    <div id="inputcontainer">
+      <form action="" id="form" label="Specific Deal Searcher">
+        <div class="inputs">
+          <h2>Search for a Specific Game Deal:</h2>
+          <div class="input1">
+              <label for="inputtitle"> Game Title:</label>
+              <input type="text" id="inputtitle" /> <br> 
+          </div>
+          <div class="input2">
+              <label for="inputprice"> Max Price for Your Deals:</label>
+              <input type="text" id="inputprice"/> <br>
+          </div>
+          <div class="input3">
+            <label for="dealamnt"> How many deals do you want?</label>
+            <input type="text" id="dealamnt"/> <br>
+          </div>
+            <input type="submit" value="Click to Submit" id="submit" />
+          </div>
+      </form>
+    </div>
     <h3></h3>
     <div id="app"></div>
     <div id="flexcontainer">
