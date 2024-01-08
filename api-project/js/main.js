@@ -1,10 +1,11 @@
 //const URL = `https://www.cheapshark.com/api/1.0/deals?&upperPrice=15`; 
 import { DOMSelectors } from "./dom";
 
-DOMSelectors.top10btn.addEventListener("click", function(){
+function top10(){
   let URL = `https://www.cheapshark.com/api/1.0/deals?&pageSize=10`;
   async function getData(URL) {
     try {
+      document.querySelector("h2").textContent = "Top 10 Deals Right Now";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -23,10 +24,10 @@ DOMSelectors.top10btn.addEventListener("click", function(){
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h3").textContent = "Error";
+      document.querySelector("h2").textContent = "Error";
     }}
     getData(URL);
-  })
+  }
   /*async function getStore(brlr) {
     try {
       const response = await fetch(brlr);
@@ -46,6 +47,8 @@ DOMSelectors.top10btn.addEventListener("click", function(){
   let BRL = `https://www.cheapshark.com/api/1.0/stores`;
   //getStore(BRL);
   console.log(BRL);  <h6 id="${storeID}">Store: ${storeID}</h3>*/
+
+top10();
 
 function clearcards() {
   const card = document.querySelectorAll(".card");
@@ -89,10 +92,10 @@ document.querySelector("#stores").addEventListener("change", function(){
   let URL = `https://www.cheapshark.com/api/1.0/deals?storeID=${document.querySelector("#stores").value}`;
   async function getStores(URL) {
     try {
-      document.querySelector("h4").textContent = "";
+      document.querySelector("h2").textContent = "Here's some deals from the store:";
       const response = await fetch(URL);
       const data = await response.json();
-      //console.log(data)
+      console.log(data)
       function insert(arr) {
         arr.forEach((data) => DOMSelectors.container.insertAdjacentHTML("beforeend",
         `<div class="flexcontainer">
@@ -112,7 +115,7 @@ document.querySelector("#stores").addEventListener("change", function(){
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h4").textContent = "Error";
+      document.querySelector("h2").textContent = "Error";
     }}
     getStores(URL);
 })
@@ -122,6 +125,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
   let URL = `https://www.cheapshark.com/api/1.0/deals?title=${DOMSelectors.inputname.value}&upperPrice=${DOMSelectors.inputprice.value}&pageSize=${DOMSelectors.dealamnt.value}`;
   async function getData(URL) {
     try {
+      document.querySelector("h2").textContent = "Here's your specific deal(s):";
       const response = await fetch(URL);
       const data = await response.json();
       console.log(data)
@@ -140,7 +144,7 @@ DOMSelectors.form.addEventListener("submit", function(event) {
     }
     catch (error) {
       console.log("error");
-      document.querySelector("h3").textContent = "Error";
+      document.querySelector("h2").textContent = "Error";
     }}
     getData(URL);
   });
