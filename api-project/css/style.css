@@ -10,6 +10,9 @@ body {
     justify-content: space-around;
    }
    
+#dealname {
+  margin-left: 7.5vh;
+}
 
 .card {
     display: flex;
