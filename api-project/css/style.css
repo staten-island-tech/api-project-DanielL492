@@ -1,4 +1,8 @@
-
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: rgba(255, 0, 43, 0.678);
+    transition: all .3s;
+   }
  
  #flexcontainer {
     flex-wrap: wrap;
@@ -13,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background-color: var(--thirdcolor);
+    background-color: rgba(110, 110, 241, 0.774);
     width: 25vw;
     height: 50vh;
     font-size: 1rem;
@@ -52,3 +56,19 @@
       font-size: 2rem;
     }
    }
+
+   #everything {
+    background-color: rgb(230, 55, 55); 
+    height: 20%;
+    width: 20%;
+    margin-left: 40%;  
+    margin-right: 40%;
+    margin-bottom: 2.5%;
+   }
+
+   .title {
+    margin-left: 20vw;
+    margin-right: 20vw;
+    border-radius: 7px;
+   }
+   
